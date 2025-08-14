@@ -1,0 +1,5 @@
+python-whois
+dnspython
+requests
+python-nmap
+shodan
