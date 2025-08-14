@@ -1,3 +1,6 @@
+### VulRecon Scanner
+A Python-based all-in-one recon & vulnerability tool with real-time CVE alerts.
+
 VulRecon Scanner is a Python-based, all-in-one reconnaissance and vulnerability scanning tool for ethical hacking, penetration testing, and OSINT research.
 It performs domain & network reconnaissance and real-time CVE lookups to help identify known vulnerabilities and security misconfigurations.
 
