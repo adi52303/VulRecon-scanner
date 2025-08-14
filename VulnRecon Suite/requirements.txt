@@ -3,3 +3,21 @@ dnspython
 requests
 python-nmap
 shodan
+
+# Optional NVD API Key
+# --------------------
+# The CVE lookup module can work without an API key, but unauthenticated requests
+# are heavily rate-limited (usually 5 requests per 30 seconds).
+#
+# To avoid rate-limiting and allow frequent queries, you can create a free NVD API key:
+#   https://nvd.nist.gov/developers
+#
+# Then set it in your environment:
+#   Windows PowerShell:
+#       setx NVD_API_KEY "YOUR_KEY"
+#   macOS/Linux:
+#       echo 'export NVD_API_KEY="YOUR_KEY"' >> ~/.zshrc
+#       source ~/.zshrc
+#
+# The module automatically reads the API key from the environment and uses it for requests.
+
