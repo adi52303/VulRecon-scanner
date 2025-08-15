@@ -32,4 +32,4 @@ def subdomain_bruteforce(domain, wildcard_ips):
     except FileNotFoundError:
         print(f"[!] Wordlist not found at {wordlist_path}")
 
-    return found_subdomains
+    return {full_sub: ips for full_sub, ips in found_subdomains}
