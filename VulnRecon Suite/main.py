@@ -39,7 +39,7 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"[!] Failed to resolve {target}: {e}")
 
-    for sub, ips in subdomains_data:
+    for sub, ips in subdomains_data.items():
         for ip in ips:
             port_scan_results[sub] = port_scan(ip)
 
