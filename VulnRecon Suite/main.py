@@ -45,17 +45,17 @@ if __name__ == "__main__":
 
     http_headers = grab_http_headers(target)
 
-# Port scan (you already do this)
+
 open_ports_main = port_scan_results.get(target, [])
 
-# === NEW: build software list & fetch CVEs ===
-software_tokens = parse_server_header(http_headers)  # e.g., ['Apache 2.4.6','Apache/2.4.6']
+
+software_tokens = parse_server_header(http_headers)  
 cve_by_software = cve_findings_from_software(software_tokens, max_per_software=6)
 
-# You may also merge 'basic_risk_rules' into your TXT/JSON report if you want a separate section:
-basic_risks = basic_risk_rules(set(open_ports_main))  # expects list[int] or set[int]
 
-# Finally include CVEs in save_report:
+basic_risks = basic_risk_rules(set(open_ports_main))  
+
+
 save_report(
     target,
     whois_data,
